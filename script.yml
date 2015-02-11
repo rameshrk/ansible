@@ -1,0 +1,7 @@
+  
+---
+-  hosts: all
+   tasks:
+#   - copy : src=/root/ansible/remotescript.sh 
+   - shell : /root/ansible/remotescript.sh > /root/ansible/output.txt
+   - command : "echo Hostname : `hostname` >> /root/ansible/output.txt"
